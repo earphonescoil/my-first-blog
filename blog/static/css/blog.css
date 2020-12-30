@@ -1,4 +1,6 @@
-
+html {
+    direction:rtl;
+}
 
 .page-header {
     background-color: #C25100;
@@ -14,10 +16,11 @@
 
 .content {
     margin-left: 40px;
+    margin-right: 0;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Arial', cursive;
 }
 
 .date {
@@ -34,8 +37,8 @@ h1, h2, h3, h4 {
 
 .top-menu, .top-menu:hover, .top-menu:visited {
     color: #ffffff;
-    float: right;
-    font-size: 26pt;
+    float: left;
+    font-size: 60pt;
     margin-right: 20px;
 }
 
