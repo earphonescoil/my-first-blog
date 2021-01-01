@@ -10,7 +10,7 @@ html {
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: #ffffff;
-    font-size: 36pt;
+    font-size: 48pt;
     text-decoration: none;
 }
 
@@ -21,10 +21,15 @@ html {
 
 h1, h2, h3, h4 {
     font-family: 'Arial', cursive;
+    font-size: 45;
+}
+
+p {
+    font-size: 30;
 }
 
 .date {
-    color: #828282;
+    color: #D8D8D8;
 }
 
 .save {
