@@ -19,6 +19,9 @@ def post_new(request):
             post = form.save(commit=False)
             post.author = request.user
             post.published_date = timezone.now()
+            #post.text1 = '215'
+            #post.text1 = str(float(int(post.text))-float(int(post.title)))
+            post.text1 = int(Post.objects.values_list('text1', flat=True).order_by('-id')[0]) - int(post.title)
             post.save()
             #return redirect('post_detail', pk=post.pk)
             return redirect('post_list')

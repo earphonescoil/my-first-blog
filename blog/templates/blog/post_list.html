@@ -6,7 +6,9 @@
 			<div class="date">
 				<p>{{ post.published_date.hour }}:{{ post.published_date.minute }} {{ post.published_date.day }}.{{ post.published_date.month }}</p>
 			</div>
-			<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+			<h2><a href="{% url 'post_detail' pk=post.pk %}">הוצאנו {{ post.title }} ש״ח, נשאר {{ post.text1 }}</a></h2>			
+
+		
 			<p>{{ post.text|linebreaksbr }}</p>
 		</div>
 	{% endfor %}
