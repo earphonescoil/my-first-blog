@@ -5,7 +5,7 @@ from django.utils import timezone
 
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    title = models.CharField('יתרה', max_length=200)
+    title = models.CharField('סכום ההוצאה. *הוספת תקציב תתבצע במינוס, לדוגמא -215', max_length=200)
     text = models.TextField('מידע נוסף')
     text1 = models.TextField('מידע נוסף 1')
     created_date = models.DateTimeField(default=timezone.now)
