@@ -120,3 +120,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Ori tries to solve the logout issue
+
+SESSION_COOKIE_AGE = 120960000
