@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
+    'django_q',
 ]
 
 MIDDLEWARE = [
@@ -122,5 +123,24 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Ori tries to solve the logout issue
-
 SESSION_COOKIE_AGE = 120960000
+
+# Ori this is from https://mattsegal.dev/simple-scheduled-tasks.html
+# Configure your Q cluster
+# More details https://django-q.readthedocs.io/en/latest/configure.html
+Q_CLUSTER = {
+    "name": "mysite",
+    "timeout": 30,
+    "orm": "default",  # Use Django's ORM + database for broker
+}
+
+#040421
+# Email Settings
+# Ori note the ‘’ that was copied
+# Ori check gmail settings for this account 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'earphonescoil@gmail.com'
+EMAIL_HOST_PASSWORD = 'debadeba121245'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
