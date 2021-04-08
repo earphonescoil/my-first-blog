@@ -13,9 +13,8 @@ def send_myemail():
 	#later I will change the “to email”
 	send_mail(
 	'תזכורת מאפליקציית תקציב סופרמרקט והשלמות', # subject
-	'תודה מצוות הפיתוח‎ http://earphonescoil1.pythonanywhere.com שלום משפחת מטלון! אנא עדכנו הוצאות באפליקציה', # message
+	',שלום משפחת מטלון\nאנא עדכנו הוצאות באפליקציה\nhttp://earphonescoil1.pythonanywhere.com\nתודה מצוות הפיתוח', # message
 	'earphonescoil@gmail.com', # from email
-	['ori.matalon@gmail.com', 'liron.branch@gmail.com', 'amiros111111@gmail.com'], # to email
+	['ori.matalon@gmail.com', 'Liron.Branch@hot.net.il', 'amiros111111@gmail.com'], # to email
 	fail_silently = False,
 	)
-		
