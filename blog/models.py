@@ -1,12 +1,14 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+import os
 
 
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField('סכום הוצאה להשלמות. *הוספת תקציב תתבצע במינוס, לדוגמא -215', max_length=200)
-    text = models.TextField('מידע נוסף')
+    # text = models.TextField('מידע נוסף')
+    text = models.TextField(os.environ.get('DB_PASS'))
     text1 = models.TextField('מידע נוסף 1')
     exp_super = models.CharField('סכום הוצאה לסופר. *הוספת תקציב תתבצע במינוס, לדוגמא -610', max_length=200)
     bal_super = models.CharField('יתרה סופר', max_length=200)
