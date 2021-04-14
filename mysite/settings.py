@@ -14,6 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+print("BASE_DIR is" + BASE_DIR)
 
 
 # Quick-start development settings - unsuitable for production
@@ -140,7 +141,11 @@ Q_CLUSTER = {
 # Ori check gmail settings for this account 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'earphonescoil@gmail.com'
-EMAIL_HOST_PASSWORD = 'dsshpulomvcabxia'
+#EMAIL_HOST_USER = 'earphonescoil@gmail.com'
+# EMAIL_HOST_USER = os.environ.get('DB_USER')
+# EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
+TEST_ORI = os.environ.get('TERM_PROGRAM')
+
+print(os.environ.get('DB_PASS'))
