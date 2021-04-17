@@ -14,7 +14,7 @@ def send_myemail():
 	send_mail(
 	'תזכורת מאפליקציית תקציב סופרמרקט והשלמות', # subject
 	',שלום משפחת מטלון\nאנא עדכנו הוצאות באפליקציה\nhttp://earphonescoil1.pythonanywhere.com\nתודה מצוות הפיתוח', # message
-	'earphonescoil@gmail.com', # from email
+	'fswd2021@gmail.com', # from email
 	['ori.matalon@gmail.com', 'Liron.Branch@hot.net.il', 'amiros111111@gmail.com'], # to email
 	fail_silently = False,
 	)
